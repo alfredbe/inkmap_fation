@@ -199,6 +199,7 @@ export function getWMSParams(layerSpec) {
  * @return {import('rxjs').Observable<LayerPrintStatus>}
  */
 function createLayerWMS(jobId, layerSpec, rootFrameState) {
+  console.log("printer", layerSpec.projection, "---", layerSpec)
   if (layerSpec.tiled) {
     return createTiledLayer(
       jobId,
